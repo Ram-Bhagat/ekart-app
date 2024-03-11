@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <app-filter
+      [all]="allProductCount"
+      [inStock]="inStockProductCount" 
+      [outOfStock]="outOfStockProductCount"
+      (filterProductEvent)="onFilterChanged($event)"
+    ></app-filter>
+    <div class="row">
+      <ng-container *ngFor="let product of products">
+        <ng-container *ngIf="selectedValue === 'all' || (product.is_in_inventory.toString() === selectedValue)">
+          <div class="col-md-3 mb-3" app-product [product]="product"></div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+  

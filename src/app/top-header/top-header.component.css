@@ -1,0 +1,11 @@
+.offer-wrap {
+    text-align: center;
+    text-transform: capitalize;
+    background: #222;
+    color: #fff;
+    padding: 5px;
+}
+
+.offer-wrap p {
+    margin: 0;
+}

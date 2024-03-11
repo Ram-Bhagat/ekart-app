@@ -1,0 +1,9 @@
+.form-check-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-check {
+    margin-right: 10px; /* Adjust as needed */
+  }
+  

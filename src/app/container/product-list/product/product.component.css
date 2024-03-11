@@ -1,0 +1,39 @@
+.inner-wrap {
+    border: 1px solid #dddddd;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 6px 1px #dbdbdb;
+}
+.product-image {
+    min-height: 200px;
+    background: #efefefdd;
+    border-radius: 2px;
+    position: relative;
+}
+.price {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 0px 12px;
+    border-radius: 2px;
+    bottom: 0;
+    left: 0;
+}
+.fav {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.discount {
+    position: absolute;
+    top: 13%;
+    right: 0;
+    background: #ffd700;
+    padding: 0px 12px;
+    border-radius: 2px;
+}
+.other-details,
+.colors {
+    color: #6e6e6edd;
+    font-weight: 300;
+}

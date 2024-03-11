@@ -1,0 +1,22 @@
+.search-bar{
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #a9a9a9aa;
+    background: #fafafa;
+}
+.search-bar:focus{
+    outline: 0;
+}
+.search-btn{
+    border: none;
+    background: #222222;
+    color: #fff;
+    padding: 10px 24px;
+}
+.search-btn-disable{
+    border: none;
+    background: #616161;
+    color: #fff;
+    padding: 10px 24px;
+    cursor: not-allowed;
+}
