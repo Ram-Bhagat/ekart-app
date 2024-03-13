@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-list',
@@ -259,4 +259,23 @@ export class ProductListComponent {
  onFilterChanged(value:any){
   this.selectedValue = value
  }
+
+ @Input()
+ filteredSearch:string = ''
+
+ 
+ isProductVisible(product: any): boolean {
+  // Show all products if selectedValue is 'all' and filteredSearch is empty
+  if (this.selectedValue === 'all' && this.filteredSearch === '') {
+    return true;
+  }
+
+  // Show products based on filter and search criteria
+  return (
+    (this.selectedValue === 'all' || product.is_in_inventory.toString() === this.selectedValue) &&
+    (this.filteredSearch === '' || product.name.toLowerCase().includes(this.filteredSearch.toLowerCase()))
+  );
+}
+
+ 
 }

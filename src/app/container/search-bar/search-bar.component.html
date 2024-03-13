@@ -1,7 +1,7 @@
 <div class="search-bar-wrap">
     <div class="col-md-6 mx-auto">
     <div class="col-md-9 d-flex justify-content-center mx-auto">
-        <input type="text" placeholder="Search..." class="search-bar" [(ngModel)]="searchName">
+        <input type="text" placeholder="Search..." class="search-bar"(input)="searchedText($event)">
         <button [ngClass]="{'search-btn': searchName, 'search-btn-disable': !searchName}" [disabled]="!searchName">Search</button>
     </div>
     <h6 class="mb-0 mt-4" *ngIf="searchName"><strong>Search Result For:</strong> {{searchName}}</h6>
