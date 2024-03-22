@@ -12,8 +12,8 @@ export class SearchBarComponent {
  @Output()
  searchEvent:EventEmitter<string> = new EventEmitter<string>()
 
- searchedText(value:any){
- this.searchName = value.target.value;
+ searchedText(inputEl: HTMLInputElement){
+  this.searchName = inputEl.value
   this.searchEvent.emit(this.searchName)
  }
 

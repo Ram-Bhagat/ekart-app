@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-container',
@@ -9,6 +10,8 @@ export class ContainerComponent {
 
 
   onsearchedType:string = ""
+
+  @ViewChild('productListComp') productListComp:ProductListComponent | undefined;
 
   onSearchText(value:string){
    this.onsearchedType = value

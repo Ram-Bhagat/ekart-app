@@ -1,4 +1,5 @@
 <div class="container-list mt-4">
     <app-search-bar (searchEvent)="onSearchText($event)"></app-search-bar>
-    <app-product-list [filteredSearch]="onsearchedType"></app-product-list>
+    <app-product-list [filteredSearch]="onsearchedType" #productListComp></app-product-list>
+    <product-details *ngIf="productListComp.selectedProduct" [productListComp]="productListComp"></product-details>
 </div>

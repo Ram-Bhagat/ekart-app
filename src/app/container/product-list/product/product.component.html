@@ -2,12 +2,12 @@
     <div class="product-image">
         <img src="" alt="img">
         <i class="fa fa-heart-o fav" aria-hidden="true"></i>
-        <div class="price">${{product.price}}</div>
-        <div class="discount" *ngIf="product.discount_price">{{calculateDiscountPercentage(product).toFixed(0)}}% OFF</div>
+        <div class="price">${{product?.price}}</div>
+        <div class="discount" *ngIf="product?.discount_price">{{calculateDiscountPercentage(product).toFixed(0)}}% OFF</div>
     </div>
-    <div class="product-name">{{product.name}}</div>
-    <div class="other-details"> {{product.gender}} . {{product.category}} . {{product.brand}}</div>
-    <div class="colors">{{product.colors.length}} Colors Best Seller</div>
-    <div class="inventory" [ngStyle]="{'color':product.is_in_inventory ? 'green' : 'red'}">{{ product.is_in_inventory ?
+    <div class="product-name">{{product?.name}}</div>
+    <div class="other-details"> {{product?.gender}} . {{product?.category}} . {{product?.brand}}</div>
+    <div class="colors">{{product?.colors?.length}} Colors Best Seller</div>
+    <div class="inventory" [ngStyle]="{'color':product?.is_in_inventory ? 'green' : 'red'}">{{ product?.is_in_inventory ?
         'Available' : 'Not Available' }}</div>
 </div>

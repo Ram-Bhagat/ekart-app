@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Product } from '../../../models/product';
 
 @Component({
   selector: 'app-product',
@@ -8,21 +9,7 @@ import { Component, Input } from '@angular/core';
 export class ProductComponent {
 
   @Input()
-  product:{ 
-    id: string;
-    name: string;
-    description: string;
-    brand: string;
-    gender: string;
-    category: string;
-    size: string[];
-    colors: string[];
-    price: number;
-    is_in_inventory: boolean;
-    item_left: number;
-    discount_price: number|null;
-    imageUrl: string;
-    slug: string;} | any
+  product:Product| undefined
 
     calculateDiscountPercentage(product: any): number {
       const mainPrice = product.price;

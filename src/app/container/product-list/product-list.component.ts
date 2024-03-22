@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-product-list',
@@ -6,6 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+
+  selectedProduct:Product | undefined;
+  
    products = [
     {
       id: "1",
@@ -63,7 +67,7 @@ export class ProductListComponent {
       gender: "Men",
       category: "Basketball Shoes",
       size: ["US 8", "US 9", "US 10", "US 11", "US 12"],
-      colors: ["Black/Red", "White/Blue", "Gray/Orange"],
+      colors: ["Red", "White", "Orange"],
       price: 89.99,
       is_in_inventory: false,
       item_left: 8,
@@ -128,7 +132,7 @@ export class ProductListComponent {
       gender: "Women",
       category: "Athletic Shoes",
       size: ["US 6", "US 7", "US 8", "US 9", "US 10"],
-      colors: ["White/Pink", "Blue/Yellow", "Black/Gray"],
+      colors: ["Pink", "Yellow", "Black"],
       price: 89.99,
       is_in_inventory: true,
       item_left: 15,
@@ -192,7 +196,7 @@ export class ProductListComponent {
       gender: "Men",
       category: "Football Gear",
       size: ["US 8", "US 9", "US 10", "US 11", "US 12"],
-      colors: ["Black/White", "Red/Black", "Blue/Silver"],
+      colors: ["White", "Black", "Silver"],
       price: 129.99,
       is_in_inventory: false,
       item_left: 8,
